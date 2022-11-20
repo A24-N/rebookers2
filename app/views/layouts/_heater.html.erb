@@ -1,0 +1,17 @@
+<heater>
+  <% if user_signed_in? %>
+    <ul>
+      <li class="pt-3"><%= link_to root_path do %>Home<% end %></li>
+      <li><%= link_to users_path do %>Users<% end %></li>
+      <li><%= link_to books_path do %>Books<% end %></li>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %></li>
+    </ul>
+  <% else %>
+    <ul>
+      <li class="pt-3"><%= link_to root_path do %>Home<% end %></li>
+      <li><%= link_to about_path do %>About<% end %></li>
+      <li><%= link_to new_user_registration_path do %>Sign up<% end %></li>
+      <li><%= link_to new_user_session_path do %>Log in<% end %></li>
+    </ul>
+  <% end %>
+</heater>

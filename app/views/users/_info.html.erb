@@ -1,0 +1,15 @@
+<p>プロフィール画像</p>
+<table>
+  <tbody>
+    <tr>
+      <td><strong>name</strong></td>
+      <td><strong><%= user_info.name %></strong></td>
+    </tr>
+    <tr>
+      <td><strong>introduction</strong></td>
+      <td><strong><%= user_info.introduction %></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "マイページ編集", edit_user_path(user_info) %>
