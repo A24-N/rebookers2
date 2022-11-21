@@ -1,5 +1,5 @@
-<p>プロフィール画像</p>
-<table>
+<p><%= image_tag user_info.get_profile_image(100,100) %></p>
+<table class="table">
   <tbody>
     <tr>
       <td><strong>name</strong></td>
@@ -12,4 +12,7 @@
   </tbody>
 </table>
 
-<%= link_to "マイページ編集", edit_user_path(user_info) %>
+
+<%= link_to edit_user_path(user_info), class: "btn btn-outline-secondary btn-block" do %>
+  <i class="fas fa-user-cog"></i>
+<% end %>

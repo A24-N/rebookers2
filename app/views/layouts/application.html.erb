@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Rebookers2</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +12,9 @@
 
   <body>
     <%= render "layouts/heater" %>
+    <%= flash[:notice] %>
+    <div class="my-3"></div>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
